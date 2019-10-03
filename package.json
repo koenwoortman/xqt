@@ -1,0 +1,11 @@
+{
+  "name": "xqt",
+  "version": "0.0.1",
+  "description": "I'm always forgetting the npm scripts in my package.json",
+  "repository": "git@github.com:koenwoortman/xqt.git",
+  "author": "Koen Woortman <koensw@outlook.com>",
+  "license": "MIT",
+  "bin": {
+    "xqt": "./index.js"
+  }
+}
