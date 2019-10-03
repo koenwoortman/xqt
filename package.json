@@ -1,11 +1,16 @@
 {
   "name": "xqt",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "I'm always forgetting the npm scripts in my package.json",
   "repository": "git@github.com:koenwoortman/xqt.git",
   "author": "Koen Woortman <koensw@outlook.com>",
   "license": "MIT",
+  "scripts": {},
   "bin": {
     "xqt": "./index.js"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.2",
+    "shelljs": "^0.8.3"
   }
 }
