@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
+const SCRIPT = 'xqt';
+const VERSION = '0.1.1';
+
 const fs = require('fs')
 const path = './package.json'
 
 if (!fs.existsSync(path)) {
-  console.log('Oops: there is no package.json in this directory');
+  console.log(`${SCRIPT}: No 'package.json' found`);
   process.exit(1);
 }
 
@@ -13,7 +16,7 @@ const json = JSON.parse(fs.readFileSync(path, 'utf8'));
 const { scripts } = json
 
 if (scripts === undefined || (Object.keys(scripts).length === 0 && scripts.constructor === Object)) {
-  console.log('Oops: no scripts found in the package.json');
+  console.log(`${SCRIPT}: No scripts found in 'package.json'`);
   process.exit(1);
 }
 
