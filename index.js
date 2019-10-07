@@ -2,6 +2,7 @@
 
 const SCRIPT = 'xqt';
 const VERSION = '0.1.1';
+const PACKAGE_MANAGER = 'yarn';
 
 const fs = require('fs')
 const path = './package.json'
@@ -37,7 +38,7 @@ const prompt = new Select({
 
 prompt.run().then(answer => {
   const shell = require('shelljs')
-  const cmd = `yarn run ${answer}`;
+  const cmd = `${PACKAGE_MANAGER} run ${answer}`;
 
   shell.exec(cmd)
 }).catch((error) => {
