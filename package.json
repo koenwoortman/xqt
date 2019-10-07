@@ -1,6 +1,6 @@
 {
   "name": "xqt",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "I'm always forgetting the npm scripts in my package.json",
   "repository": "git@github.com:koenwoortman/xqt.git",
   "author": "Koen Woortman <koensw@outlook.com>",

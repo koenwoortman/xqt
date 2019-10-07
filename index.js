@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 const SCRIPT = 'xqt';
-const VERSION = '0.1.1';
+const VERSION = '0.1.2';
 const PACKAGE_MANAGER = 'yarn';
 
-const fs = require('fs')
-const path = './package.json'
+const fs = require('fs');
+const path = './package.json';
+
+const option = process.argv[2];
+
+if (option === '--version' || option === '-v') {
+  console.log(`${SCRIPT}: ${VERSION}`);
+  process.exit(0);
+}
 
 if (!fs.existsSync(path)) {
   console.log(`${SCRIPT}: No 'package.json' found`);
@@ -14,17 +21,17 @@ if (!fs.existsSync(path)) {
 
 const json = JSON.parse(fs.readFileSync(path, 'utf8'));
 
-const { scripts } = json
+const { scripts } = json;
 
 if (scripts === undefined || (Object.keys(scripts).length === 0 && scripts.constructor === Object)) {
   console.log(`${SCRIPT}: No scripts found in 'package.json'`);
   process.exit(1);
 }
 
-const choices = []
+const choices = [];
 
 for (var key in scripts) {
-  choices.push(`${key}`)
+  choices.push(`${key}`);
 }
 
 const { Select } = require('enquirer');
@@ -37,10 +44,10 @@ const prompt = new Select({
 
 
 prompt.run().then(answer => {
-  const shell = require('shelljs')
+  const shell = require('shelljs');
   const cmd = `${PACKAGE_MANAGER} run ${answer}`;
 
   shell.exec(cmd)
 }).catch((error) => {
-  console.log(error)
-})
+  console.log(error);
+});
