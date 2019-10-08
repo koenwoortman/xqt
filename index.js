@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const SCRIPT = 'xqt';
-const VERSION = '0.1.2';
+const VERSION = require('./package.json').version;
 const PACKAGE_MANAGER = 'yarn';
 
 const fs = require('fs');
