@@ -1,9 +1,26 @@
 {
   "name": "xqt",
-  "version": "0.1.3",
-  "description": "I'm always forgetting the npm scripts in my package.json",
+  "version": "0.1.4",
+  "description": "I'm always forgetting which npm scripts I have in my package.json",
   "repository": "git@github.com:koenwoortman/xqt.git",
-  "author": "Koen Woortman <koensw@outlook.com>",
+  "author": {
+		"name": "Koen Woortman",
+		"email": "koensw@outlook.com",
+		"url": "https://koenwoortman.nl"
+  },
+  "keywords": [
+    "cli",
+    "package.json",
+    "script",
+    "bin",
+    "console",
+    "terminal",
+    "tty",
+    "command-line"
+  ],
+  "engines": {
+		"node": ">=8"
+	},
   "license": "MIT",
   "scripts": {},
   "bin": {
