@@ -23,7 +23,10 @@ const json = JSON.parse(fs.readFileSync(path, 'utf8'));
 
 const { scripts } = json;
 
-if (scripts === undefined || (Object.keys(scripts).length === 0 && scripts.constructor === Object)) {
+if (
+  scripts === undefined ||
+  (Object.keys(scripts).length === 0 && scripts.constructor === Object)
+) {
   console.log(`${SCRIPT}: No scripts found in 'package.json'`);
   process.exit(1);
 }
@@ -42,12 +45,14 @@ const prompt = new Select({
   choices: choices
 });
 
+prompt
+  .run()
+  .then(answer => {
+    const shell = require('shelljs');
+    const cmd = `${PACKAGE_MANAGER} run ${answer}`;
 
-prompt.run().then(answer => {
-  const shell = require('shelljs');
-  const cmd = `${PACKAGE_MANAGER} run ${answer}`;
-
-  shell.exec(cmd)
-}).catch((error) => {
-  console.log(error);
-});
+    shell.exec(cmd);
+  })
+  .catch(error => {
+    console.log(error);
+  });
