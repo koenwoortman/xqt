@@ -14,6 +14,19 @@ if (option === '--version' || option === '-v') {
   process.exit(0);
 }
 
+if (option === '--help' || option === '-h') {
+  console.log(`
+  Version: ${VERSION}
+
+  Usage: ${SCRIPT} [options]
+  Options:
+    -V, --version  output the version number
+    -h, --help     output this help info
+  `);
+
+  process.exit(0);
+}
+
 if (!fs.existsSync(path)) {
   console.log(`${SCRIPT}: No 'package.json' found`);
   process.exit(1);
