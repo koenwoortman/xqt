@@ -20,7 +20,7 @@ if (option === '--help' || option === '-h') {
 
   Usage: ${SCRIPT} [options]
   Options:
-    -V, --version  output the version number
+    -v, --version  output the version number
     -h, --help     output this help info
   `);
 
