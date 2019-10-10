@@ -22,7 +22,9 @@
 		"node": ">=8"
 	},
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test": "echo 'Write tests'"
+  },
   "bin": {
     "xqt": "./index.js"
   },
