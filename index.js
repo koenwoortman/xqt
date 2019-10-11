@@ -2,7 +2,7 @@
 
 const SCRIPT = 'xqt';
 const VERSION = require('./package.json').version;
-const PACKAGE_MANAGER = 'yarn';
+const DEFAULT_PACKAGE_MANAGER = 'npm';
 
 const fs = require('fs');
 const path = './package.json';
@@ -62,7 +62,7 @@ prompt
   .run()
   .then(answer => {
     const shell = require('shelljs');
-    const cmd = `${PACKAGE_MANAGER} run ${answer}`;
+    const cmd = `${DEFAULT_PACKAGE_MANAGER} run ${answer}`;
 
     shell.exec(cmd);
   })
