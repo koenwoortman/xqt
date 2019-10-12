@@ -20,6 +20,7 @@ if (option === '--help' || option === '-h') {
 
   Usage: ${SCRIPT} [options]
   Options:
+    --yarn  	   use yarn as package manager
     -v, --version  output the version number
     -h, --help     output this help info
   `);
@@ -44,6 +45,8 @@ if (
   process.exit(1);
 }
 
+const packageManager = option === '--yarn' ? 'yarn' : DEFAULT_PACKAGE_MANAGER;
+
 const choices = [];
 
 for (let key in scripts) {
@@ -62,7 +65,7 @@ prompt
   .run()
   .then(answer => {
     const shell = require('shelljs');
-    const cmd = `${DEFAULT_PACKAGE_MANAGER} run ${answer}`;
+    const cmd = `${packageManager} run ${answer}`;
 
     shell.exec(cmd);
   })

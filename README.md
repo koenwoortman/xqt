@@ -16,13 +16,19 @@ $ npm install --global xqt
 
 ## Usage
 
-Pick and run a script from the package.json file
+Pick and run a script from the package.json file.
 ```
 [~/package]$ xqt
 ? Pick a script …
 ▸ dev
   test
   build
+```
+
+Same as above, but use yarn instead of npm.
+```
+[~/package]$ xqt --yarn
+? Pick a script …
 ```
 
 Shows xqt help information.
