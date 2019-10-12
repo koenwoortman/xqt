@@ -46,7 +46,7 @@ if (
 
 const choices = [];
 
-for (var key in scripts) {
+for (let key in scripts) {
   choices.push(`${key}`);
 }
 
