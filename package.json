@@ -4,9 +4,9 @@
   "description": "I'm always forgetting which npm scripts I have in my package.json",
   "repository": "git@github.com:koenwoortman/xqt.git",
   "author": {
-		"name": "Koen Woortman",
-		"email": "koensw@outlook.com",
-		"url": "https://koenwoortman.nl"
+    "name": "Koen Woortman",
+    "email": "koensw@outlook.com",
+    "url": "https://koenwoortman.nl"
   },
   "keywords": [
     "cli",
@@ -19,8 +19,8 @@
     "command-line"
   ],
   "engines": {
-		"node": ">=8"
-	},
+    "node": ">=8"
+  },
   "license": "MIT",
   "scripts": {
     "test": "echo 'Write tests'"
