@@ -58,17 +58,17 @@ const { Select } = require('enquirer');
 const prompt = new Select({
   name: 'script',
   message: 'Pick a script',
-  choices: choices
+  choices: choices,
 });
 
 prompt
   .run()
-  .then(answer => {
+  .then((answer) => {
     const shell = require('shelljs');
     const cmd = `${packageManager} run ${answer}`;
 
     shell.exec(cmd);
   })
-  .catch(error => {
+  .catch((error) => {
     console.log(error);
   });
