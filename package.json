@@ -23,16 +23,17 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "echo 'Write tests'"
+    "test": "mocha"
   },
   "bin": {
-    "xqt": "./index.js"
+    "xqt": "./src/cli.js"
   },
   "dependencies": {
     "enquirer": "^2.3.2",
     "shelljs": "^0.8.3"
   },
   "devDependencies": {
+    "mocha": "^6.2.1",
     "prettier": "^1.18.2"
   }
 }

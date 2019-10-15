@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const SCRIPT = 'xqt';
-const VERSION = require('./package.json').version;
+const VERSION = require('../package.json').version;
 const DEFAULT_PACKAGE_MANAGER = 'npm';
 
 const fs = require('fs');
